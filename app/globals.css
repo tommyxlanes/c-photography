@@ -3,19 +3,33 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-coffee: #42342a;
+  --color-text-coffee: #2c221d;
+  --color-expresso-alt: #1e1713;
+  --color-expresso: #2c221d;
+  --bg-text-coffee: #2c221d;
+  --bg-expresso-alt: #1e1713;
+  --bg-expresso: #2c221d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-coffee: var(--color-coffee);
+  --color-text-coffee: var(--color-text-coffee);
+  --color-expresso: var(--color-expresso);
+  --color-expresso-alt: var(--color-expresso-alt);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-playfair: var(--font-playfair);
+  --font-bodoni: var(--font-bodoni);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    /* You can override colors for dark mode here if needed */
   }
 }
 
