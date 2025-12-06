@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 const categories = [
   {
@@ -50,7 +51,7 @@ const categories = [
   },
 ];
 
-const parentVariants = {
+const parentVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -60,14 +61,14 @@ const parentVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: "easeOut",
     },
   },
 };
