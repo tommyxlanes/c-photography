@@ -97,28 +97,14 @@ const Contact = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-stone-50 to-background">
+    <section className="relative">
       <div className="mx-auto">
         {/* Section Header */}
-        <div className="relative z-10 pb-12  text-center mb-16 w-full bg-[#fcfbf9]">
+        <div className="relative z-10 pb-12  text-center mb-16 w-full bg-background">
           <div className="flex items-center justify-center gap-6 mb-4">
-            <Image
-              src={"/images/floral-left.png"}
-              alt="floral"
-              width={70}
-              height={50}
-              className="opacity-50 mt-2"
-            />
-            <h2 className="font-playfair text-5xl md:text-6xl text-coffee">
-              Get in Touch
+            <h2 className="font-playfair text-4xl md:text-5xl uppercase text-coffee">
+              Contact
             </h2>
-            <Image
-              src={"/images/floral-right.png"}
-              alt="floral"
-              width={70}
-              height={50}
-              className="opacity-50 mt-2"
-            />
           </div>
           <p className="font-bodoni text-lg text-coffee/70 max-w-2xl mx-auto">
             Let's create something beautiful together
@@ -133,7 +119,7 @@ const Contact = () => {
         {/* Full Width Split Background */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto">
           {/* Left Side - Form with Coffee Background */}
-          <div className="bg-[#d4c5b0] p-8 md:p-12 lg:p-16">
+          <div className="bg-transparent p-8 md:p-12 lg:p-16">
             <div className="max-w-xl mx-auto">
               <h3 className="font-playfair text-3xl text-coffee mb-6">
                 Send a Message

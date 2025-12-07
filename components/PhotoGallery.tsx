@@ -63,11 +63,11 @@ const PhotoGallery = ({ images, title, description }: PhotoGalleryProps) => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="font-playfair text-5xl md:text-6xl text-coffee mb-4">
+            <h1 className="font-playfair uppercase text-5xl md:text-6xl text-coffee mb-4">
               {title}
             </h1>
             {description && (
-              <p className="font-bodoni text-lg text-coffee/70 max-w-2xl mx-auto">
+              <p className="font-playfair text-lg text-coffee/70 max-w-2xl mx-auto">
                 {description}
               </p>
             )}
@@ -90,7 +90,7 @@ const PhotoGallery = ({ images, title, description }: PhotoGalleryProps) => {
                 className="break-inside-avoid group cursor-pointer"
                 onClick={() => openLightbox(image, index)}
               >
-                <div className="relative overflow-hidden rounded-lg bg-coffee/10">
+                <div className="relative overflow-hidden bg-coffee/10">
                   <Image
                     src={image}
                     alt={`${title} photo ${index + 1}`}
@@ -216,7 +216,7 @@ const PhotoGallery = ({ images, title, description }: PhotoGalleryProps) => {
                 alt="Full size photo"
                 width={1200}
                 height={1600}
-                className="max-h-[85vh] w-auto object-contain rounded-lg"
+                className="max-h-[85vh] w-auto object-contain"
               />
             </motion.div>
 

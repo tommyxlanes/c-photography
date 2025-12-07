@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 md:gap-8">
             {/* Left Menu - Desktop */}
-            <div className="hidden md:flex items-center justify-end space-x-10 font-bodoni">
+            <div className="hidden md:flex items-center justify-end space-x-10 font-playfair">
               {leftMenuItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="text-coffee hover:text-expresso text-base tracking-widest uppercase transition-colors duration-300 relative group"
+                    className="text-coffee text-base tracking-widest uppercase transition-colors duration-300 relative group"
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-px bg-coffee transition-all duration-300 group-hover:w-full" />
@@ -87,15 +87,15 @@ const Navbar = () => {
                 <Image
                   src="/images/logo.png"
                   alt="Photography"
-                  width={isScrolled ? 120 : 150}
-                  height={isScrolled ? 80 : 100}
+                  width={isScrolled ? 90 : 110}
+                  height={isScrolled ? 55 : 75}
                   className="transition-all duration-500"
                 />
               </Link>
             </motion.div>
 
             {/* Right Menu - Desktop */}
-            <div className="hidden md:flex items-center justify-start space-x-10 font-bodoni">
+            <div className="hidden md:flex items-center justify-start space-x-10 font-playfair">
               {rightMenuItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -105,7 +105,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="text-coffee hover:text-expresso text-base tracking-widest uppercase transition-colors duration-300 relative group"
+                    className="text-coffee text-base tracking-widest uppercase transition-colors duration-300 relative group"
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-px bg-coffee transition-all duration-300 group-hover:w-full" />
@@ -211,7 +211,7 @@ const Navbar = () => {
                 className="absolute bottom-20 flex flex-col items-center"
               >
                 <div className="w-px h-16 bg-background/30 mb-4" />
-                <p className="font-bodoni text-background/50 text-sm tracking-widest">
+                <p className="font-playfair text-background/50 text-sm tracking-widest">
                   PHOTOGRAPHY
                 </p>
               </motion.div>

@@ -39,7 +39,7 @@ const categories = [
     slug: "graduations",
     title: "Graduations",
     description: "Honoring your achievements",
-    image: "/images/graduations/DSC00807.jpg",
+    image: "/images/graduations/DSC08562.jpg",
     count: 23,
   },
   {
@@ -78,24 +78,50 @@ export default function PortfolioPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-expresso/60 via-expresso/40 to-background z-10" />
-        <Image
-          src="/images/wedding/DSC00425.jpg"
-          alt="Portfolio hero"
-          fill
-          className="object-cover object-top"
-          priority
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/30 via-expresso/10 to-background z-10" />
+        <div className="absolute inset-0 overflow-hidden">
+          <svg
+            className="absolute bottom-0 w-full h-[24%] z-30 pointer-events-none"
+            viewBox="0 0 100 25"
+            preserveAspectRatio="none"
+          >
+            <path d="M0 25 C25 8 75 8 100 25 L100 25 L0 25 Z" fill="white" />
+          </svg>
+
+          <Image
+            src="/images/main.png"
+            alt="Portfolio hero"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+
         <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="absolute bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
+        >
+          <p className="font-playfair tracking-wide text-lg md:text-4xl font-light text-stone-200 max-w-lg uppercase">
+            Visual
+            <br />
+            storyteller <br />
+            for the wildy
+            <br />
+            in love
+          </p>
+        </motion.div>
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-20 text-center px-6"
+          className="absolute inset-0 flex items-center justify-center z-30 px-6 text-center"
         >
-          <p className="font-bodoni text-lg md:text-3xl text-coffee max-w-2xl mx-auto">
-            A collection of cherished moments and timeless memories
+          <p className="font-playfair tracking-wide text-2xl md:text-5xl font-light text-beige/80 uppercase leading-tight">
+            Visual storyteller for the wildly in love
           </p>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* Categories Grid */}
@@ -114,7 +140,7 @@ export default function PortfolioPage() {
                   href={`/portfolio/${category.slug}`}
                   className="group block"
                 >
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-coffee/10">
+                  <div className="relative overflow-hidden aspect-[4/5] bg-coffee/10">
                     <Image
                       src={category.image}
                       alt={category.title}
@@ -127,10 +153,7 @@ export default function PortfolioPage() {
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-8">
-                      <span className="font-bodoni text-sm text-background/60 mb-2">
-                        {category.count} photos
-                      </span>
-                      <h2 className="font-playfair text-3xl md:text-4xl text-background mb-2 transform transition-transform duration-500 group-hover:-translate-y-1">
+                      <h2 className="font-playfair text-3xl md:text-4xl text-stone-100 mb-2 transform transition-transform duration-500 group-hover:-translate-y-1">
                         {category.title}
                       </h2>
                       <p className="font-bodoni text-background/80 text-sm mb-4">
@@ -161,45 +184,6 @@ export default function PortfolioPage() {
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="py-20 px-6 bg-coffee/10">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-playfair text-4xl md:text-5xl text-coffee mb-6">
-              Let&apos;s Create Together
-            </h2>
-            <p className="font-bodoni text-coffee/70 mb-8">
-              Ready to capture your special moments? Get in touch and let&apos;s
-              discuss your vision.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-coffee text-background font-bodoni tracking-wider rounded-full hover:bg-expresso transition-colors duration-300"
-            >
-              Book a Session
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
           </motion.div>
         </div>
       </section>

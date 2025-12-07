@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-beige: #cbad8d;
   --color-coffee: #42342a;
   --color-text-coffee: #2c221d;
   --color-expresso-alt: #1e1713;
@@ -10,12 +11,15 @@
   --bg-text-coffee: #2c221d;
   --bg-expresso-alt: #1e1713;
   --bg-expresso: #2c221d;
+  --bg-beige: #f5f2ec;
 }
 
 @theme inline {
+  --color-bgmain: var(--bg-beige);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-coffee: var(--color-coffee);
+  --color-beige: var(--color-beige);
   --color-text-coffee: var(--color-text-coffee);
   --color-expresso: var(--color-expresso);
   --color-expresso-alt: var(--color-expresso-alt);
