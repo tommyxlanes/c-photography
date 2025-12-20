@@ -78,22 +78,23 @@ export default function PortfolioPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-beige/30 via-expresso/10 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/30 to-transparent z-10" />
         <div className="absolute inset-0 overflow-hidden">
-          <svg
+          {/* <svg
             className="absolute bottom-0 w-full h-[24%] z-30 pointer-events-none"
             viewBox="0 0 100 25"
             preserveAspectRatio="none"
           >
             <path d="M0 25 C25 8 75 8 100 25 L100 25 L0 25 Z" fill="white" />
-          </svg>
+          </svg> */}
 
           <Image
-            src="/images/main.png"
+            src="/images/hero-main.jpg"
             alt="Portfolio hero"
             fill
-            className="object-cover object-top"
+            className="object-cover object-bottom"
             priority
+            quality={100}
           />
         </div>
 
@@ -103,11 +104,12 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8 }}
           className="absolute bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
         >
-          <p className="font-playfair tracking-wide text-lg md:text-4xl font-light text-stone-200 max-w-lg uppercase">
+          <p className="font-playfair tracking-wide text-2xl md:text-4xl font-light text-stone-100 uppercase leading-tight">
             Visual
             <br />
-            storyteller <br />
-            for the wildy
+            storyteller
+            <br />
+            <span className="text-background/70">for the wildly</span>
             <br />
             in love
           </p>
@@ -190,21 +192,3 @@ export default function PortfolioPage() {
     </main>
   );
 }
-
-// import Contact from "@/components/Contact";
-// import HeroBanner from "@/components/Hero";
-// import CardSection from "@/components/MidSection";
-// import PhotoGallery from "@/components/PhotoGallery";
-// import PhotoPreview from "@/components/PhotoPreview";
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="min-h-screen bg-[#fcfbf9]">
-//       <HeroBanner />
-//       <CardSection />
-//       <PhotoPreview />
-//       <Contact />
-//     </div>
-//   );
-// }

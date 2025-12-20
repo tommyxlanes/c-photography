@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const rightMenuItems = [
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const allMenuItems = [...leftMenuItems, ...rightMenuItems];
@@ -41,6 +41,26 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
+
+  // Smooth scroll handler
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+      // Close mobile menu if open
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <>
@@ -67,6 +87,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
                     className="text-coffee text-base tracking-widest uppercase transition-colors duration-300 relative group"
                   >
                     {item.name}
@@ -89,7 +110,9 @@ const Navbar = () => {
                   alt="Photography"
                   width={isScrolled ? 90 : 110}
                   height={isScrolled ? 55 : 75}
-                  className="transition-all duration-500"
+                  className={`${
+                    isMobileMenuOpen ? "invert" : ""
+                  } transition-all duration-500`}
                 />
               </Link>
             </motion.div>
@@ -105,6 +128,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
                     className="text-coffee text-base tracking-widest uppercase transition-colors duration-300 relative group"
                   >
                     {item.name}
@@ -128,7 +152,7 @@ const Navbar = () => {
                       y: isMobileMenuOpen ? 6 : 0,
                       width: isMobileMenuOpen ? 24 : 24,
                     }}
-                    className="block h-px bg-coffee origin-center transition-all"
+                    className="block h-px bg-beige origin-center transition-all"
                     style={{ width: 24 }}
                   />
                   <motion.span
@@ -136,7 +160,7 @@ const Navbar = () => {
                       opacity: isMobileMenuOpen ? 0 : 1,
                       x: isMobileMenuOpen ? 10 : 0,
                     }}
-                    className="block h-px bg-coffee"
+                    className="block h-px bg-beige"
                     style={{ width: 18 }}
                   />
                   <motion.span
@@ -145,7 +169,7 @@ const Navbar = () => {
                       y: isMobileMenuOpen ? -6 : 0,
                       width: isMobileMenuOpen ? 24 : 12,
                     }}
-                    className="block h-px bg-coffee origin-center transition-all"
+                    className="block h-px bg-beige origin-center transition-all"
                     style={{ width: 12 }}
                   />
                 </div>
@@ -193,7 +217,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => handleSmoothScroll(e, item.href)}
                       className="font-playfair text-4xl text-background hover:text-background/70 transition-colors duration-300"
                     >
                       {item.name}

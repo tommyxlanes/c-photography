@@ -1,3 +1,6 @@
+// data/images.ts
+// Image data for portfolio galleries
+
 export const engagementImages = [
   "/images/engagement/DSC00399.jpg",
   "/images/engagement/DSC01200.jpg",
@@ -20,6 +23,7 @@ export const engagementImages = [
   "/images/engagement/DSC09684.jpg",
   "/images/engagement/DSC09741.jpg",
 ];
+
 export const eventsImages = [
   "/images/events/DSC00014.jpg",
   "/images/events/DSC00036.jpg",
@@ -42,6 +46,7 @@ export const eventsImages = [
   "/images/events/DSC09859.jpg",
   "/images/events/DSC09950.jpg",
 ];
+
 export const graduationsImages = [
   "/images/graduations/DSC00045.jpg",
   "/images/graduations/DSC00271.jpg",
@@ -67,6 +72,7 @@ export const graduationsImages = [
   "/images/graduations/DSC09613.jpg",
   "/images/graduations/DSC09747.jpg",
 ];
+
 export const maternityImages = [
   "/images/maternity/DSC01061.jpg",
   "/images/maternity/DSC01150.jpg",
@@ -86,6 +92,7 @@ export const maternityImages = [
   "/images/maternity/DSC06827.jpg",
   "/images/maternity/DSC06844.jpg",
 ];
+
 export const portraitsImages = [
   "/images/portraits/DSC02238.jpg",
   "/images/portraits/DSC02426.jpg",
@@ -105,6 +112,7 @@ export const portraitsImages = [
   "/images/portraits/DSC09752.jpg",
   "/images/portraits/DSC09841.jpg",
 ];
+
 export const weddingImages = [
   "/images/wedding/DSC00203.jpg",
   "/images/wedding/DSC00301.jpg",
@@ -126,6 +134,7 @@ export const weddingImages = [
   "/images/wedding/DSC09895.jpg",
   "/images/wedding/DSC09985.jpg",
 ];
+
 export const allImages = [
   ...weddingImages,
   ...engagementImages,
@@ -134,3 +143,40 @@ export const allImages = [
   ...graduationsImages,
   ...eventsImages,
 ];
+
+// Category metadata for dynamic pages
+export const categoryMeta: Record<
+  string,
+  { title: string; description: string }
+> = {
+  wedding: {
+    title: "Wedding Photography",
+    description:
+      "Capturing the magic, emotion, and unforgettable moments of your special day.",
+  },
+  engagement: {
+    title: "Engagement Sessions",
+    description:
+      "Celebrating your love story with romantic and authentic portraits.",
+  },
+  portraits: {
+    title: "Portrait Photography",
+    description:
+      "Every face tells a story. Timeless portraits that capture personality and emotion.",
+  },
+  maternity: {
+    title: "Maternity Photography",
+    description:
+      "Beautiful moments of anticipation, celebrating the journey to motherhood.",
+  },
+  graduations: {
+    title: "Graduation Photography",
+    description:
+      "Honoring your achievements and capturing this milestone moment.",
+  },
+  events: {
+    title: "Event Photography",
+    description:
+      "From corporate gatherings to celebrations, memorable occasions captured forever.",
+  },
+};

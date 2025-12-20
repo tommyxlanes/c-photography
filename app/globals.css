@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fffdfa;
   --foreground: #171717;
   --color-beige: #cbad8d;
   --color-coffee: #42342a;
@@ -27,14 +27,6 @@
   --font-mono: var(--font-geist-mono);
   --font-playfair: var(--font-playfair);
   --font-bodoni: var(--font-bodoni);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    /* You can override colors for dark mode here if needed */
-  }
 }
 
 body {

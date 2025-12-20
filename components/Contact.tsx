@@ -97,7 +97,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="relative">
+    <section id="contact" className="relative scroll-mt-24">
       <div className="mx-auto">
         {/* Section Header */}
         <div className="relative z-10 pb-12  text-center mb-16 w-full bg-background">
