@@ -57,9 +57,9 @@ const Navbar = () => {
           block: "start",
         });
       }
-      // Close mobile menu if open
-      setIsMobileMenuOpen(false);
     }
+    // Move this OUTSIDE the if block
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -111,7 +111,7 @@ const Navbar = () => {
                   width={isScrolled ? 90 : 110}
                   height={isScrolled ? 55 : 75}
                   className={`${
-                    isMobileMenuOpen ? "invert" : ""
+                    isMobileMenuOpen && !isScrolled ? "invert" : ""
                   } transition-all duration-500`}
                 />
               </Link>
@@ -149,10 +149,14 @@ const Navbar = () => {
                   <motion.span
                     animate={{
                       rotate: isMobileMenuOpen ? 45 : 0,
-                      y: isMobileMenuOpen ? 6 : 0,
+                      y: isMobileMenuOpen ? 8 : 0,
                       width: isMobileMenuOpen ? 24 : 24,
                     }}
-                    className="block h-px bg-beige origin-center transition-all"
+                    className={`${
+                      isMobileMenuOpen && !isScrolled
+                        ? "bg-beige"
+                        : "bg-expresso"
+                    } block h-px origin-center`}
                     style={{ width: 24 }}
                   />
                   <motion.span
@@ -160,16 +164,24 @@ const Navbar = () => {
                       opacity: isMobileMenuOpen ? 0 : 1,
                       x: isMobileMenuOpen ? 10 : 0,
                     }}
-                    className="block h-px bg-beige"
+                    className={`${
+                      isMobileMenuOpen && !isScrolled
+                        ? "bg-beige"
+                        : "bg-expresso"
+                    } block h-px`}
                     style={{ width: 18 }}
                   />
                   <motion.span
                     animate={{
                       rotate: isMobileMenuOpen ? -45 : 0,
-                      y: isMobileMenuOpen ? -6 : 0,
+                      y: isMobileMenuOpen ? -7 : 0,
                       width: isMobileMenuOpen ? 24 : 12,
                     }}
-                    className="block h-px bg-beige origin-center transition-all"
+                    className={`${
+                      isMobileMenuOpen && !isScrolled
+                        ? "bg-beige"
+                        : "bg-expresso"
+                    } block h-px origin-center`}
                     style={{ width: 12 }}
                   />
                 </div>
@@ -187,7 +199,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-40 md:hidden min-h-screen"
           >
             {/* Backdrop */}
             <motion.div
@@ -204,7 +216,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="relative h-full flex flex-col items-center justify-center"
+              className="relative min-h-full flex flex-col items-center justify-center"
             >
               <nav className="flex flex-col items-center space-y-8">
                 {allMenuItems.map((item, index) => (

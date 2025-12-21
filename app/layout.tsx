@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,6 +86,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Contact />
+        <Footer />
       </body>
     </html>
   );

@@ -270,7 +270,7 @@ export default function PortfolioPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-coffee mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl text-coffee mb-4 uppercase">
               {activeFilter ? activeCategory?.title : "Portfolio"}
             </h2>
             <p className="font-bodoni text-coffee/70 max-w-2xl mx-auto">
@@ -319,9 +319,9 @@ export default function PortfolioPage() {
                             <h2 className="font-playfair text-3xl md:text-4xl text-stone-100 transform transition-transform duration-500 group-hover:-translate-y-1">
                               {category.title}
                             </h2>
-                            <span className="font-bodoni text-xs text-background/60 bg-background/10 px-2 py-1 rounded-full">
+                            {/* <span className="font-bodoni text-xs text-background/60 bg-background/10 px-2 py-1 rounded-full">
                               {category.count} photos
-                            </span>
+                            </span> */}
                           </div>
                           <p className="font-bodoni text-background/80 text-sm mb-4">
                             {category.description}

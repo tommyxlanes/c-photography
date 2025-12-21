@@ -114,7 +114,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
-            <h1 className="font-playfair text-4xl md:text-6xl text-coffee mb-4">
+            <h1 className="uppercase font-playfair text-4xl md:text-6xl text-coffee mb-4">
               {title}
             </h1>
             {description && (

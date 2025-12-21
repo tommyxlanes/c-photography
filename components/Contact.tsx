@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -100,15 +101,34 @@ const Contact = () => {
     <section id="contact" className="relative scroll-mt-24">
       <div className="mx-auto">
         {/* Section Header */}
-        <div className="relative z-10 pb-12  text-center mb-16 w-full bg-background">
-          <div className="flex items-center justify-center gap-6 mb-4">
+        <div className="relative z-10 py-8  text-center w-full bg-background">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <p className="font-bodoni text-coffee/60 tracking-widest text-sm uppercase mb-4">
+                Let's Create Together
+              </p>
+              <h2 className="font-playfair text-3xl md:text-5xl text-coffee mb-6 leading-tight uppercase">
+                Ready to Tell Your Story?
+              </h2>
+              <p className="font-bodoni text-coffee/70 text-lg mb-10 max-w-xl mx-auto">
+                I'd love to hear about your plans and see if we're the right
+                fit. Let's grab a virtual coffee and chat about your vision.
+              </p>
+            </motion.div>
+          </div>
+          {/* <div className="flex items-center justify-center gap-6 mb-4">
             <h2 className="font-playfair text-4xl md:text-5xl uppercase text-coffee">
               Contact
             </h2>
           </div>
           <p className="font-bodoni text-lg text-coffee/70 max-w-2xl mx-auto">
             Let's create something beautiful together
-          </p>
+          </p> */}
         </div>
 
         <div className="absolute inset-0 w-full h-full grid grid-cols-1 lg:grid-cols-2">
