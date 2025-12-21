@@ -101,7 +101,7 @@ const Contact = () => {
     <section id="contact" className="relative scroll-mt-24">
       <div className="mx-auto">
         {/* Section Header */}
-        <div className="relative z-10 py-8  text-center w-full bg-background">
+        <div className="relative z-10 p-8  text-center w-full bg-background">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
