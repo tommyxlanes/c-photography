@@ -199,7 +199,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 md:hidden min-h-screen"
+            className="fixed inset-0 z-40 md:hidden h-dvh"
           >
             {/* Backdrop */}
             <motion.div
@@ -216,7 +216,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="relative min-h-full flex flex-col items-center justify-center"
+              className="relative h-dvh flex flex-col items-center justify-center"
             >
               <nav className="flex flex-col items-center space-y-8">
                 {allMenuItems.map((item, index) => (
