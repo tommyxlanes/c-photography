@@ -94,7 +94,7 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute top-1/4 md:bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
+          className="absolute top-1/3 md:bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
         >
           <p className="font-playfair tracking-wide text-2xl md:text-4xl font-light text-stone-100 uppercase leading-tight">
             Visual
