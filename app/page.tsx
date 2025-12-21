@@ -77,22 +77,14 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen md:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-dvh md:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent z-10" />
         <div className="absolute inset-0 overflow-hidden">
-          {/* <svg
-            className="absolute bottom-0 w-full h-[24%] z-30 pointer-events-none"
-            viewBox="0 0 100 25"
-            preserveAspectRatio="none"
-          >
-            <path d="M0 25 C25 8 75 8 100 25 L100 25 L0 25 Z" fill="white" />
-          </svg> */}
-
           <Image
             src="/images/hero-main.jpg"
             alt="Portfolio hero"
             fill
-            className="object-cover object-bottom"
+            className="object-cover object-center md:object-bottom"
             priority
             quality={100}
           />
@@ -102,7 +94,7 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute top-1/2 md:bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
+          className="absolute top-1/4 md:bottom-24 left-0 z-20 px-12 py-6 bg-expresso/60"
         >
           <p className="font-playfair tracking-wide text-2xl md:text-4xl font-light text-stone-100 uppercase leading-tight">
             Visual
