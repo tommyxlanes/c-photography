@@ -46,8 +46,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Email",
-      value: "hello@cphotography.com",
-      link: "mailto:hello@cphotography.com",
+      value: "Perez _christian _13@yahoo.com",
+      link: "mailto:Perez _christian _13@yahoo.com",
     },
     {
       icon: (
@@ -66,8 +66,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+1 (626) 384-8731",
+      link: "tel:+16263848731",
     },
     {
       icon: (
@@ -93,6 +93,32 @@ const Contact = () => {
       ),
       label: "Location",
       value: "Los Angeles, CA",
+      link: "#",
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M12 8v4l2.5 2.5"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M12 21a9 9 0 100-18 9 9 0 000 18z"
+          />
+        </svg>
+      ),
+      label: "Hours",
+      value: "Mon – Sun · 8am – 10pm",
       link: "#",
     },
   ];
